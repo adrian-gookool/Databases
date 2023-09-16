@@ -51,7 +51,6 @@ VALUES (
         )
     );
 
-
 WITH sterling_platform AS (
     INSERT INTO public.platforms (
             created_at,
@@ -104,9 +103,6 @@ VALUES (
             FROM sterling_platform
         )
     );
-
-
-
 
 -- DAS Platform
 WITH das_platform AS (
@@ -162,10 +158,6 @@ VALUES (
         )
     );
 
-
-
-
-
 -- MT5 Platform 
 WITH mt5_platform AS (
     INSERT INTO public.platforms (
@@ -220,10 +212,6 @@ VALUES (
             FROM mt5_platform
         )
     );
-
-
-
-
 
 -- Query to View Data
 SELECT *

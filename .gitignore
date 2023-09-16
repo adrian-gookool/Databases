@@ -4,7 +4,7 @@ Databases/redis-data
 Databases/mongo-data
 
 # VSCode
-.vscode/
+# .vscode/
 
 # Logs
 logs/
