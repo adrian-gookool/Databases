@@ -5,22 +5,11 @@
             "server": "localhost",
             "port": 5432,
             "driver": "PostgreSQL",
-            "name": "UK Database",
-            "group": "CMEG",
+            "group": "Local-Machine",
+            "name": "UK-Database",
             "database": "mondeum",
             "username": "monduser",
             "password": "pass1234"
-        },
-        {
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 5432,
-            "driver": "PostgreSQL",
-            "group": "CMEG",
-            "name": "KY Database",
-            "database": "dev-onboarding-ky",
-            "username": "postgres",
-            "password": "password"
         }
     ],
     "sqltools.completionLanguages": [
