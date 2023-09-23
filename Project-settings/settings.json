@@ -1,0 +1,43 @@
+{
+    "gradle.autoDetect": "on",
+    "xml.java.home": "C:\\Users\\amgoo\\.jdks\\temurin-1.8.0_382",
+    "java.import.gradle.java.home": "C:\\Users\\amgoo\\.jdks\\temurin-1.8.0_382",
+    "java.import.gradle.wrapper.enabled": true,
+    "java.autobuild.enabled": true,
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.completion.enabled": true,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.import.maven.enabled": true,
+    "maven.executable.preferMavenWrapper": true,
+    "maven.terminal.useJavaHome": true,
+    "maven.terminal.customEnv": [
+      {
+        "environmentVariable": "JAVA_HOME",
+        "value": "C:\\Users\\amgoo\\.jdks\\temurin-1.8.0_382"
+      }
+    ],
+    "maven.executable.path": ".\\mvnw.cmd",
+    "java.import.maven.offline.enabled": true,
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "C:\\Users\\amgoo\\.jdks\\temurin-1.8.0_382",
+            "sources": "C:\\Users\\amgoo\\.jdks\\temurin-1.8.0_382\\src.zip",
+            "javadoc": "https://docs.oracle.com/javase/8/docs/api/"
+          },
+          {
+            "name": "JavaSE-11",
+            "path": "C:\\Users\\amgoo\\.jdks\\temurin-11.0.20.1",
+            "sources": "C:\\Users\\amgoo\\.jdks\\temurin-11.0.20.1\\lib\\src.zip",
+            "javadoc": "https://docs.oracle.com/en/java/javase/11/docs/api/"
+          },
+          {
+            "name": "JavaSE-17",
+            "path": "C:\\Users\\amgoo\\.jdks\\temurin-17.0.8.1",
+            "sources": "C:\\Users\\amgoo\\.jdks\\temurin-17.0.8.1\\lib\\src.zip",
+            "javadoc": "https://docs.oracle.com/en/java/javase/17/docs/api/",
+            "default": true
+          }
+    ]
+  }
+  
