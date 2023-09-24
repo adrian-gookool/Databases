@@ -5,8 +5,8 @@ INSERT INTO public.users (
         email,
         full_name,
         identifier,
-        PASSWORD,
-        STATUS,
+        password,
+        status,
         updated_at,
         title,
         department,
@@ -15,11 +15,11 @@ INSERT INTO public.users (
         l_id
     )
 VALUES (
-        1,
+        3,
         19,
         NOW(),
         'test@gmail.com',
-        'Adrian Gookool',
+        'Tim Larason',
         'd2689860-bc6a-4a50-9626-a47a28432ce9',
         'admin',
         'ACTIVE',
