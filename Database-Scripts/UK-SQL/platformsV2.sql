@@ -25,7 +25,7 @@ WITH capitall_platform AS (
             'https://www.cmelitegroup.co.uk/platforms/cap-it-all',
             TRUE,
             '/v2/assets/img/icons/capitall.png',
-            'assets/img/logos/capitall.png'
+            'assets/img/logos/capitall.png',
             TRUE,
             'CAP it ALL'
         )
