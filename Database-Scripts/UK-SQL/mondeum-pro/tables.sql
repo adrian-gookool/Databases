@@ -1299,7 +1299,7 @@ CREATE TABLE IF NOT EXISTS public.platform_details (
 ALTER TABLE public.platform_details OWNER TO postgres;
 
 CREATE TABLE IF NOT EXISTS public.platform_switches (
-    id integer NOT NULL,
+    id SERIAL PRIMARY KEY,
     created_at timestamp without time zone,
     updated_at timestamp without time zone,
     from_platform VARCHAR(255),
