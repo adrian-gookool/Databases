@@ -1268,11 +1268,49 @@ CREATE TABLE IF NOT EXISTS public.platforms (
     id integer NOT NULL,
     created_at timestamp without time zone,
     updated_at timestamp without time zone,
-    display boolean,
-    name character varying(255)
+    name VARCHAR(255),
+    display BOOLEAN DEFAULT FALSE,
+    cop_img_url VARCHAR(255),
+    dashboard_img_url VARCHAR(255),
+    detail_url VARCHAR(255),
+    is_popular BOOLEAN DEFAULT FALSE,
+    description TEXT,
+    features TEXT
 );
 
 ALTER TABLE public.platforms OWNER TO postgres;
+
+-- Add a unique constraint for the 'id' column in the 'platforms' table
+ALTER TABLE public.platforms
+ADD CONSTRAINT pk_platforms_id UNIQUE (id);
+
+CREATE TABLE IF NOT EXISTS public.platform_details (
+    id integer NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    product_title VARCHAR(255),
+    product_account VARCHAR(255),
+    leverage_type VARCHAR(255),
+    product_type VARCHAR(255),
+    platform_option_id INT,
+    FOREIGN KEY (platform_option_id) REFERENCES public.platforms(id)
+);
+
+ALTER TABLE public.platform_details OWNER TO postgres;
+
+CREATE TABLE IF NOT EXISTS public.platform_switches (
+    id integer NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    from_platform VARCHAR(255),
+    to_platform VARCHAR(255),
+    email VARCHAR(255),
+    status VARCHAR(255)
+);
+
+ALTER TABLE public.platform_switches OWNER TO postgres;
+
+
 
 --
 -- TOC entry 242 (class 1259 OID 322930)
@@ -1282,6 +1320,13 @@ CREATE SEQUENCE public.platforms_id_seq AS integer START WITH 1 INCREMENT BY 1 N
 
 ALTER TABLE public.platforms_id_seq OWNER TO postgres;
 
+CREATE SEQUENCE public.platform_details_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+
+ALTER TABLE public.platform_details_id_seq OWNER TO postgres;
+
+CREATE SEQUENCE public.platforms_switches_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+
+ALTER TABLE public.platforms_switches_id_seq OWNER TO postgres;
 --
 -- TOC entry 3580 (class 0 OID 0)
 -- Dependencies: 242
@@ -1289,6 +1334,9 @@ ALTER TABLE public.platforms_id_seq OWNER TO postgres;
 --
 ALTER SEQUENCE public.platforms_id_seq OWNED BY public.platforms.id;
 
+ALTER SEQUENCE public.platform_details_id_seq OWNED BY public.platform_details.id;
+
+ALTER SEQUENCE public.platforms_switches_id_seq OWNED BY public.platform_switches.id;
 --
 -- TOC entry 253 (class 1259 OID 323152)
 -- Name: product_request_result; Type: TABLE; Schema: public; Owner: postgres
@@ -1421,7 +1469,8 @@ CREATE TABLE IF NOT EXISTS public.users (
     department character varying(255),
     mfa boolean DEFAULT false,
     secret character varying(255),
-    l_id integer
+    l_id integer,
+    role character varying(255)
 );
 
 ALTER TABLE public.users OWNER TO postgres;
@@ -1932,6 +1981,10 @@ SET DEFAULT nextval('public.notifications_id_seq'::regclass);
 ALTER TABLE ONLY public.platforms
 ALTER COLUMN id
 SET DEFAULT nextval('public.platforms_id_seq'::regclass);
+
+ALTER TABLE ONLY public.platform_details
+ALTER COLUMN id
+SET DEFAULT nextval('public.platform_details_id_seq'::regclass);
 
 --
 -- TOC entry 3222 (class 2604 OID 322943)
