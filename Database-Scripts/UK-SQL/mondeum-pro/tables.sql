@@ -120,7 +120,7 @@ ALTER TABLE public.account_professional_trader_status_changes_seq OWNER TO postg
 -- Name: account_requests; Type: TABLE; Schema: public; Owner: postgres
 --
 CREATE TABLE IF NOT EXISTS public.account_requests (
-    id bigint NOT NULL,
+    id SERIAL PRIMARY KEY,
     created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     request_status character varying(255),
     request_type character varying(255),
@@ -140,6 +140,7 @@ CREATE SEQUENCE public.account_requests_seq START WITH 1 INCREMENT BY 1 NO MINVA
 
 ALTER TABLE public.account_requests_seq OWNER TO postgres;
 
+ALTER SEQUENCE public.account_requests_seq OWNED BY public.account_requests.id;
 --
 -- TOC entry 261 (class 1259 OID 323229)
 -- Name: account_requests_transactions; Type: TABLE; Schema: public; Owner: postgres
