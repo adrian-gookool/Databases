@@ -10,7 +10,7 @@
             "database": "mondeum",
             "username": "monduser",
             "password": "pass1234"
-        }
+        },
     ],
     "sqltools.completionLanguages": [
         "sql",
@@ -20,9 +20,18 @@
     "sqltools.format": {
         "reservedWordCase": "upper",
         "language": "sql",
-        "linesBetweenQueries": 2,
+        "linesBetweenQueries": "preserve",
     },
     "sqltools.formatLanguages": [
         "sql"
     ],
+    "Prettier-SQL.commaPosition": "after",
+    "Prettier-SQL.keywordCase": "upper",
+    "Prettier-SQL.newlineBeforeSemicolon": false,
+    "Prettier-SQL.linesBetweenQueries": 1,
+    "Prettier-SQL.expressionWidth": 80,
+    "Prettier-SQL.ignoreTabSettings": true,
+    "Prettier-SQL.indentStyle": "tabularRight",
+    "Prettier-SQL.insertSpacesOverride": true,
+    "Prettier-SQL.denseOperators": true,
 }
