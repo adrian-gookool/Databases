@@ -63,7 +63,7 @@ ALTER TABLE public.account_financial_profile_changes OWNER TO postgres;
 -- TOC entry 289 (class 1259 OID 323512)
 -- Name: account_financial_profile_changes_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.account_financial_profile_changes_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.account_financial_profile_changes_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.account_financial_profile_changes_seq OWNER TO postgres;
 
@@ -87,7 +87,7 @@ ALTER TABLE public.account_personal_profile_changes OWNER TO postgres;
 -- TOC entry 290 (class 1259 OID 323514)
 -- Name: account_personal_profile_changes_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.account_personal_profile_changes_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.account_personal_profile_changes_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.account_personal_profile_changes_seq OWNER TO postgres;
 
@@ -111,7 +111,7 @@ ALTER TABLE public.account_professional_trader_status_changes OWNER TO postgres;
 -- TOC entry 295 (class 1259 OID 323550)
 -- Name: account_professional_trader_status_changes_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.account_professional_trader_status_changes_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.account_professional_trader_status_changes_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.account_professional_trader_status_changes_seq OWNER TO postgres;
 
@@ -136,7 +136,7 @@ ALTER TABLE public.account_requests OWNER TO postgres;
 -- TOC entry 272 (class 1259 OID 323317)
 -- Name: account_requests_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.account_requests_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.account_requests_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.account_requests_seq OWNER TO postgres;
 
@@ -161,7 +161,7 @@ ALTER TABLE public.account_requests_transactions OWNER TO postgres;
 -- TOC entry 273 (class 1259 OID 323319)
 -- Name: account_requests_transactions_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.account_requests_transactions_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.account_requests_transactions_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.account_requests_transactions_seq OWNER TO postgres;
 
@@ -205,7 +205,7 @@ ALTER TABLE public.affiliate_codes OWNER TO postgres;
 -- TOC entry 200 (class 1259 OID 322700)
 -- Name: affiliate_codes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.affiliate_codes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.affiliate_codes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.affiliate_codes_id_seq OWNER TO postgres;
 
@@ -240,7 +240,7 @@ ALTER TABLE public.affiliates OWNER TO postgres;
 -- TOC entry 202 (class 1259 OID 322711)
 -- Name: affiliates_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.affiliates_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.affiliates_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.affiliates_id_seq OWNER TO postgres;
 
@@ -377,7 +377,7 @@ ALTER TABLE public.application_documents OWNER TO postgres;
 -- TOC entry 207 (class 1259 OID 322738)
 -- Name: application_documents_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.application_documents_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.application_documents_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.application_documents_id_seq OWNER TO postgres;
 
@@ -502,7 +502,7 @@ ALTER TABLE public.application_product_requests OWNER TO postgres;
 -- TOC entry 211 (class 1259 OID 322765)
 -- Name: application_product_requests_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.application_product_requests_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.application_product_requests_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.application_product_requests_id_seq OWNER TO postgres;
 
@@ -541,7 +541,7 @@ ALTER TABLE public.application_rqd_accounts OWNER TO postgres;
 -- TOC entry 247 (class 1259 OID 323114)
 -- Name: application_rqd_accounts_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.application_rqd_accounts_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.application_rqd_accounts_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.application_rqd_accounts_id_seq OWNER TO postgres;
 
@@ -582,7 +582,7 @@ ALTER TABLE public.application_suitability_check OWNER TO postgres;
 -- TOC entry 213 (class 1259 OID 322776)
 -- Name: application_suitability_check_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.application_suitability_check_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.application_suitability_check_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.application_suitability_check_id_seq OWNER TO postgres;
 
@@ -637,7 +637,7 @@ ALTER TABLE public.applications OWNER TO postgres;
 -- TOC entry 215 (class 1259 OID 322787)
 -- Name: applications_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.applications_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.applications_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.applications_id_seq OWNER TO postgres;
 
@@ -669,7 +669,7 @@ ALTER TABLE public.audit_application_changes OWNER TO postgres;
 -- TOC entry 217 (class 1259 OID 322798)
 -- Name: audit_application_changes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.audit_application_changes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.audit_application_changes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.audit_application_changes_id_seq OWNER TO postgres;
 
@@ -702,7 +702,7 @@ ALTER TABLE public.audit_changes OWNER TO postgres;
 -- TOC entry 219 (class 1259 OID 322809)
 -- Name: audit_changes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.audit_changes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.audit_changes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.audit_changes_id_seq OWNER TO postgres;
 
@@ -734,7 +734,7 @@ ALTER TABLE public.audit_status_changes OWNER TO postgres;
 -- TOC entry 221 (class 1259 OID 322820)
 -- Name: audit_status_changes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.audit_status_changes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.audit_status_changes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.audit_status_changes_id_seq OWNER TO postgres;
 
@@ -781,7 +781,7 @@ ALTER TABLE public.audit_system_events OWNER TO postgres;
 -- TOC entry 223 (class 1259 OID 322831)
 -- Name: audit_system_events_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.audit_system_events_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.audit_system_events_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.audit_system_events_id_seq OWNER TO postgres;
 
@@ -853,7 +853,7 @@ ALTER TABLE public.comments OWNER TO postgres;
 -- TOC entry 251 (class 1259 OID 323141)
 -- Name: comments_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.comments_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.comments_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.comments_id_seq OWNER TO postgres;
 
@@ -883,7 +883,7 @@ ALTER TABLE public.country_codes OWNER TO postgres;
 -- TOC entry 225 (class 1259 OID 322842)
 -- Name: country_codes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.country_codes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.country_codes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.country_codes_id_seq OWNER TO postgres;
 
@@ -950,7 +950,7 @@ ALTER TABLE public.login_reset_tokens OWNER TO postgres;
 -- TOC entry 227 (class 1259 OID 322853)
 -- Name: login_reset_tokens_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.login_reset_tokens_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.login_reset_tokens_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.login_reset_tokens_id_seq OWNER TO postgres;
 
@@ -980,7 +980,7 @@ ALTER TABLE public.login_security OWNER TO postgres;
 -- TOC entry 229 (class 1259 OID 322864)
 -- Name: login_security_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.login_security_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.login_security_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.login_security_id_seq OWNER TO postgres;
 
@@ -1010,7 +1010,7 @@ ALTER TABLE public.login_verification_token OWNER TO postgres;
 -- TOC entry 231 (class 1259 OID 322875)
 -- Name: login_verification_token_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.login_verification_token_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.login_verification_token_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.login_verification_token_id_seq OWNER TO postgres;
 
@@ -1074,7 +1074,7 @@ ALTER TABLE public.logins OWNER TO postgres;
 -- TOC entry 233 (class 1259 OID 322883)
 -- Name: logins_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.logins_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.logins_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.logins_id_seq OWNER TO postgres;
 
@@ -1110,7 +1110,7 @@ ALTER TABLE public.messages OWNER TO postgres;
 -- TOC entry 235 (class 1259 OID 322894)
 -- Name: messages_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.messages_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.messages_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.messages_id_seq OWNER TO postgres;
 
@@ -1144,7 +1144,7 @@ ALTER TABLE public.notices OWNER TO postgres;
 -- TOC entry 237 (class 1259 OID 322905)
 -- Name: notices_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.notices_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.notices_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.notices_id_seq OWNER TO postgres;
 
@@ -1179,7 +1179,7 @@ ALTER TABLE public.notifications OWNER TO postgres;
 -- TOC entry 239 (class 1259 OID 322916)
 -- Name: notifications_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.notifications_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.notifications_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.notifications_id_seq OWNER TO postgres;
 
@@ -1317,15 +1317,15 @@ ALTER TABLE public.platform_switches OWNER TO postgres;
 -- TOC entry 242 (class 1259 OID 322930)
 -- Name: platforms_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.platforms_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.platforms_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.platforms_id_seq OWNER TO postgres;
 
-CREATE SEQUENCE public.platform_details_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.platform_details_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.platform_details_id_seq OWNER TO postgres;
 
-CREATE SEQUENCE public.platforms_switches_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.platforms_switches_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.platforms_switches_id_seq OWNER TO postgres;
 --
@@ -1391,7 +1391,7 @@ ALTER TABLE public.secure_auth_tokens OWNER TO postgres;
 -- TOC entry 244 (class 1259 OID 322938)
 -- Name: secure_auth_tokens_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.secure_auth_tokens_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.secure_auth_tokens_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.secure_auth_tokens_id_seq OWNER TO postgres;
 
@@ -1441,7 +1441,7 @@ ALTER TABLE public.user_login_roles_groups OWNER TO postgres;
 -- TOC entry 254 (class 1259 OID 323160)
 -- Name: user_login_roles_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.user_login_roles_groups_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.user_login_roles_groups_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.user_login_roles_groups_id_seq OWNER TO postgres;
 
@@ -1457,7 +1457,7 @@ ALTER SEQUENCE public.user_login_roles_groups_id_seq OWNED BY public.user_login_
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 CREATE TABLE IF NOT EXISTS public.users (
-    id bigint NOT NULL,
+    id SERIAL PRIMARY KEY,
     cop_id bigint,
     created_at timestamp without time zone,
     email character varying(255) NOT NULL,
@@ -1500,7 +1500,7 @@ ALTER TABLE public.users_agreements OWNER TO postgres;
 -- TOC entry 274 (class 1259 OID 323321)
 -- Name: users_agreements_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.users_agreements_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.users_agreements_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.users_agreements_seq OWNER TO postgres;
 
@@ -1560,7 +1560,7 @@ ALTER TABLE public.users_financial_profile OWNER TO postgres;
 -- TOC entry 275 (class 1259 OID 323323)
 -- Name: users_financial_profile_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.users_financial_profile_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.users_financial_profile_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.users_financial_profile_seq OWNER TO postgres;
 
@@ -1582,7 +1582,7 @@ ALTER TABLE public.users_notes OWNER TO postgres;
 -- TOC entry 285 (class 1259 OID 323466)
 -- Name: users_notes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.users_notes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.users_notes_id_seq AS integer START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.users_notes_id_seq OWNER TO postgres;
 
@@ -1597,7 +1597,7 @@ ALTER SEQUENCE public.users_notes_id_seq OWNED BY public.users_notes.id;
 -- TOC entry 291 (class 1259 OID 323516)
 -- Name: users_notes_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.users_notes_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.users_notes_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.users_notes_seq OWNER TO postgres;
 
@@ -1673,7 +1673,7 @@ ALTER TABLE public.users_personal_profile OWNER TO postgres;
 -- TOC entry 276 (class 1259 OID 323325)
 -- Name: users_personal_profile_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.users_personal_profile_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.users_personal_profile_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.users_personal_profile_seq OWNER TO postgres;
 
@@ -1719,7 +1719,7 @@ ALTER TABLE public.users_product_requests OWNER TO postgres;
 -- TOC entry 277 (class 1259 OID 323327)
 -- Name: users_product_requests_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.users_product_requests_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.users_product_requests_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.users_product_requests_seq OWNER TO postgres;
 
@@ -1756,7 +1756,7 @@ ALTER TABLE public.users_professional_trader_status OWNER TO postgres;
 -- TOC entry 293 (class 1259 OID 323528)
 -- Name: users_professional_trader_status_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.users_professional_trader_status_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.users_professional_trader_status_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.users_professional_trader_status_seq OWNER TO postgres;
 
@@ -1782,7 +1782,7 @@ ALTER TABLE public.users_risk_assignments OWNER TO postgres;
 -- TOC entry 284 (class 1259 OID 323459)
 -- Name: users_risk_assignments_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.users_risk_assignments_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.users_risk_assignments_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.users_risk_assignments_seq OWNER TO postgres;
 
@@ -1801,7 +1801,7 @@ ALTER TABLE public.users_roles OWNER TO postgres;
 -- TOC entry 278 (class 1259 OID 323329)
 -- Name: users_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
-CREATE SEQUENCE public.users_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE SEQUENCE IF NOT EXISTS public.users_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 
 ALTER TABLE public.users_seq OWNER TO postgres;
 

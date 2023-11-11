@@ -163,3 +163,6 @@
                 <li>Trading Signals</li>
             </ul>'
     WHERE name='MetaTrader 5';
+
+   DELETE FROM user_login_permissions
+    WHERE user_login_id IN (34, 35, 36);

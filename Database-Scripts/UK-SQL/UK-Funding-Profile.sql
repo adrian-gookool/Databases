@@ -81,7 +81,7 @@ VALUES (
         'United Kingdom',
         'SW1A 1AA BC5',
         'GH63 FWIU 3981 1331 2856 191 545',
-        '123456',
+        '123456685',
         '654321',
         'Bank of England',
         'England Chequing',
