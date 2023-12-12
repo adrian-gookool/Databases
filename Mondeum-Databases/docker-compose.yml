@@ -18,6 +18,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - database-network
 
   # mongo-database:
   #   image: mongo:latest
@@ -55,6 +57,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - database-network
 
 volumes:
   postgres-data:
@@ -62,5 +66,6 @@ volumes:
   redis-data:
 
 networks:
-  default:
-    name: ${NETWORK_NAME}
+  database-network:
+    driver: bridge
+    attachable: true

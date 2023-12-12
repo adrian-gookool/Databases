@@ -215,6 +215,60 @@
           )
           );
 
+-- Next Trade Pro (GNT Platform)
+     WITH nextTradePro_platform AS (
+             INSERT INTO public.platforms (
+                    created_at,
+                    updated_at,
+                    features,
+                    description,
+                    detail_url,
+                    is_popular,
+                    cop_img_url,
+                    dashboard_img_url,
+                    display,
+                    name
+                    )
+             VALUES (
+                    NOW (),
+                    NOW (),
+                    '<ul>
+                <li>Trade your way</li>
+                <li>Accessible</li>
+                <li>Free Platform</li>
+            </ul>',
+                    'Our proprietary trading platform Next Trade Pro is designed by traders for traders. 
+                Clean, customizable and just what any trader ordered. And the best bit? It comes with a free option.',
+                    'https://www.cmelitegroup.co.uk/platforms/cap-it-all',
+                    FALSE,
+                    '/v2/assets/img/icons/nexttraderpro.png',
+                    'assets/img/logos/nexttraderpro.png',
+                    TRUE,
+                    'Next Trader Pro'
+                    ) RETURNING id
+          )
+   INSERT INTO public.platform_details (
+          created_at,
+          updated_at,
+          product_type,
+          product_account,
+          leverage_type,
+          product_title,
+          platform_option_id
+          )
+   VALUES (
+          NOW (),
+          NOW (),
+          'Standard Trading Account',
+          'CAP it ALL Standard Account',
+          'Non-Leverage',
+          'Powered by Next-Trade Pro',
+          (
+             SELECT id
+               FROM nextTradePro_platform
+          )
+          );
+
 -- Query to View Data
    SELECT *
      FROM public.platforms AS p
