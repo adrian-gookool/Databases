@@ -31,3 +31,89 @@
           file_date DATE,
           insert_time DATE
           );
+
+
+CREATE TABLE IF NOT EXISTS public.account_transactions (
+    id integer NOT NULL,
+    region_id character varying(6) DEFAULT 'Global'::character varying NOT NULL,
+    system_id character varying(32),
+    system_date date,
+    system_activity_id character varying(32),
+    account character varying(32),
+    entry_type character varying(12),
+    trade_type character varying(3),
+    trade_date date,
+    settle_date date,
+    exec_time timestamp(3) without time zone,
+    symbol character varying(32),
+    quantity double precision,
+    price double precision,
+    gross_amt double precision,
+    commission double precision,
+    sec_fee double precision,
+    exch_fee double precision,
+    clearing_fee double precision,
+    ecn_fee double precision,
+    broker_fee double precision,
+    option_reg_fee double precision,
+    other_fee double precision,
+    purchase_int double precision,
+    net_amt double precision,
+    fx_contract_size double precision,
+    fx_profit double precision,
+    fx_swap double precision,
+    fx_raw_volume double precision,
+    sub_acct_num character varying(32),
+    contra_code character varying(4),
+    contra_corr_code character varying(4),
+    contra_office_code character varying(4),
+    contra_acct_type character varying(4),
+    contra_sub_acct character varying(16),
+    blotter_exch character varying(5),
+    blotter_clearing_type character varying(5),
+    blotter_clearing_mtd character varying(5),
+    trade_tag character varying(32),
+    trade_capacity character varying(1),
+    acct_group_code character varying(16),
+    settle_ccy character varying(4),
+    transaction_status character varying(1),
+    trade_ccy character varying(4),
+    fee_cd1 character varying(12),
+    fee1 double precision,
+    fee_cd2 character varying(12),
+    fee2 double precision,
+    fee_cd3 character varying(12),
+    fee3 double precision,
+    fee_cd4 character varying(12),
+    fee4 double precision,
+    fee_cd5 character varying(12),
+    fee5 double precision,
+    fee_cd6 character varying(12),
+    fee6 double precision,
+    route character varying(64),
+    ord_type character varying(8),
+    liquidity_ind character varying(4),
+    exec_exch character varying(64),
+    cl_ord_id character varying(64),
+    order_id character varying(64),
+    fill_id character varying(128),
+    descr character varying(128),
+    contra_acct character varying(32),
+    contra_acct_num character varying(16),
+    memo1 character varying(128),
+    file_date date NOT NULL,
+    insert_time date DEFAULT now()
+);
+
+
+CREATE SEQUENCE IF NOT EXISTS public.account_transactions_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+ALTER SEQUENCE public.account_transactions_id_seq OWNED BY public.account_transactions.id;
+ALTER TABLE ONLY public.account_transactions ALTER COLUMN id SET DEFAULT nextval('public.account_transactions_id_seq'::regclass);
+
